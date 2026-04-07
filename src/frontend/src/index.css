@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Page background: very light gray-blue */
+    --background: 0.965 0.008 240;
+    /* Primary text on light */
+    --foreground: 0.13 0.02 260;
+
+    /* Cards: white */
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.02 260;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.02 260;
+
+    /* Vivid blue primary accent */
+    --primary: 0.57 0.18 258;
+    --primary-foreground: 0.99 0 0;
+
+    /* Light secondary */
+    --secondary: 0.94 0.01 240;
+    --secondary-foreground: 0.13 0.02 260;
+
+    /* Muted */
+    --muted: 0.94 0.01 240;
+    --muted-foreground: 0.52 0.02 250;
+
+    /* Accent */
+    --accent: 0.94 0.01 240;
+    --accent-foreground: 0.13 0.02 260;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border: light gray-blue */
+    --border: 0.89 0.01 240;
+    --input: 0.89 0.01 240;
+    --ring: 0.57 0.18 258;
+
+    /* Success green */
+    --success: 0.62 0.19 145;
+    --success-foreground: 0.99 0 0;
+
+    /* ICP token: purple-blue */
+    --token-icp: 0.52 0.22 270;
+    /* SHBY token: orange/gold */
+    --token-shby: 0.72 0.15 65;
+
+    /* App bar dark */
+    --appbar: 0.14 0.03 240;
+    --appbar-foreground: 0.97 0.01 240;
+
+    /* Hero */
+    --hero: 0.16 0.04 245;
+
+    /* Chart colors */
+    --chart-1: 0.57 0.18 258;
+    --chart-2: 0.62 0.19 145;
+    --chart-3: 0.72 0.15 65;
+    --chart-4: 0.55 0.22 290;
+    --chart-5: 0.68 0.18 30;
+
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.57 0.18 258;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  .dark {
+    /* Page background: very dark navy */
+    --background: 0.13 0.025 240;
+    /* Primary text on dark */
+    --foreground: 0.94 0.01 240;
+
+    /* Cards: slightly lighter than bg */
+    --card: 0.17 0.03 240;
+    --card-foreground: 0.94 0.01 240;
+
+    --popover: 0.17 0.03 240;
+    --popover-foreground: 0.94 0.01 240;
+
+    /* Vivid blue primary accent stays the same */
+    --primary: 0.6 0.18 258;
+    --primary-foreground: 0.99 0 0;
+
+    /* Dark secondary */
+    --secondary: 0.2 0.03 240;
+    --secondary-foreground: 0.94 0.01 240;
+
+    /* Muted */
+    --muted: 0.2 0.03 240;
+    --muted-foreground: 0.6 0.02 240;
+
+    /* Accent */
+    --accent: 0.2 0.03 240;
+    --accent-foreground: 0.94 0.01 240;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border: dark gray-blue */
+    --border: 0.24 0.03 240;
+    --input: 0.24 0.03 240;
+    --ring: 0.6 0.18 258;
+
+    /* Success green */
+    --success: 0.62 0.19 145;
+    --success-foreground: 0.99 0 0;
+
+    /* Token colors unchanged */
+    --token-icp: 0.6 0.22 270;
+    --token-shby: 0.72 0.15 65;
+
+    /* App bar even darker */
+    --appbar: 0.1 0.025 240;
+    --appbar-foreground: 0.97 0.01 240;
+
+    --hero: 0.12 0.035 245;
+
+    --chart-1: 0.57 0.18 258;
+    --chart-2: 0.62 0.19 145;
+    --chart-3: 0.72 0.15 65;
+    --chart-4: 0.55 0.22 290;
+    --chart-5: 0.68 0.18 30;
+
+    --sidebar: 0.17 0.03 240;
+    --sidebar-foreground: 0.94 0.01 240;
+    --sidebar-primary: 0.6 0.18 258;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.2 0.03 240;
+    --sidebar-accent-foreground: 0.94 0.01 240;
+    --sidebar-border: 0.24 0.03 240;
+    --sidebar-ring: 0.6 0.18 258;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
